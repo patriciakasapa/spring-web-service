@@ -20,6 +20,24 @@ public class MathsTest {
     }
 
     @Test
+    public void add_Negatives() {
+        int result = maths.add(0, 0);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void add_positives() {
+        int result = maths.add(0, 0);
+        assertEquals(0, result);
+    }
+    @Test
+    public void add_pos_and_negative() {
+        int result = maths.add(0, 0);
+        assertEquals(0, result);
+    }
+
+
+    @Test
     public void subtract() {
         int result = maths.subtract(0, 0);
         assertEquals(0, result);
