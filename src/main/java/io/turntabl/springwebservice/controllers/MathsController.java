@@ -1,5 +1,6 @@
 package io.turntabl.springwebservice.controllers;
 
+import io.turntabl.springwebservice.models.Number;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MathsController {
 
-    @GetMapping
+    @GetMapping("add")
     public Number add(
             @RequestParam(name = "num1", defaultValue = "0")
             Integer num1,
@@ -15,17 +16,11 @@ public class MathsController {
             Integer num2){
         int first = Integer.parseInt(String.valueOf(num1));
         int second = Integer.parseInt(String.valueOf(num2));
-        return first + second;
+        int value = first + second;
+        Number number = new Number();
+        number.setValue(value);
+        return number;
     }
 
-    @GetMapping
-    public Number subtract(
-            @RequestParam(name = "num1", defaultValue = "0")
-                    Integer num1,
-            @RequestParam(name = "num2", defaultValue = "0")
-                    Integer num2){
-        int first = Integer.parseInt(String.valueOf(num1));
-        int second = Integer.parseInt(String.valueOf(num2));
-        return first - second;
-    }
+
 }
