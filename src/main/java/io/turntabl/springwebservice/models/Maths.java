@@ -1,6 +1,5 @@
 package io.turntabl.springwebservice.models;
 
-@Bean
 public class Maths {
     private int firstNumber;
     private int secondNumber;

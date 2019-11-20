@@ -23,7 +23,7 @@ public class MathsController {
     }
 
     @GetMapping("subtract")
-    public Number subtact(
+    public Number subtract(
             @RequestParam(name = "num1", defaultValue = "0")
                     Integer num1,
             @RequestParam(name = "num2", defaultValue = "0")
