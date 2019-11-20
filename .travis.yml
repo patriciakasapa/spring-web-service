@@ -2,7 +2,7 @@ language: java
 
 env:
   global:
-    - USERNAME=idawud
+    - USERNAME="idawud"
 
 script:
   - ./gradlew test
