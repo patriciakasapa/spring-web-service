@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 
 
 public class Maths {
-
     public int add(int num1, int num2){
         return num1 + num2;
     }
