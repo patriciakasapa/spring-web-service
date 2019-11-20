@@ -22,5 +22,18 @@ public class MathsController {
         return number;
     }
 
+    @GetMapping("subtract")
+    public Number subtact(
+            @RequestParam(name = "num1", defaultValue = "0")
+                    Integer num1,
+            @RequestParam(name = "num2", defaultValue = "0")
+                    Integer num2){
+        int first = Integer.parseInt(String.valueOf(num1));
+        int second = Integer.parseInt(String.valueOf(num2));
+        int value = first - second;
+        Number number = new Number();
+        number.setValue(value);
+        return number;
+    }
 
 }
