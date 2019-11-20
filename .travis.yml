@@ -7,7 +7,4 @@ env:
 script:
   - ./gradlew test
   - echo $USERNAME
-  - echo "I'm done"
-
-after_success:
-  - ./merge.sh $USERNAME $PASSWORD
+  - echo $PASSWORD
