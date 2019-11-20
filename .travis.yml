@@ -1,3 +1,6 @@
 language: java
 script:
   - ./gradlew test
+
+after_success:
+  - ./merge.sh $USERNAME $PASSWORD
