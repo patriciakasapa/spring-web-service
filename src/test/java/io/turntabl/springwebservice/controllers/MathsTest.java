@@ -39,7 +39,7 @@ public class MathsTest {
     @Test
     public void subtract_zero() {
         int result = maths.subtract(0, 0);
-        assertEquals(0, result);
+        assertEquals(1, result);
     }
 
     @Test
