@@ -1,6 +1,13 @@
 language: java
+
+env:
+  global:
+    - USERNAME=idawud
+
 script:
   - ./gradlew test
 
 after_success:
   - ./merge.sh $USERNAME $PASSWORD
+  - echo "I'm done"
+  - echo $USERNAME
