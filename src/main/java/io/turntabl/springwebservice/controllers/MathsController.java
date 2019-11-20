@@ -19,7 +19,13 @@ public class MathsController {
     }
 
     @GetMapping
-    public Number subtract(Integer num1, Integer num2){
-        return 0;
+    public Number subtract(
+            @RequestParam(name = "num1", defaultValue = "0")
+                    Integer num1,
+            @RequestParam(name = "num2", defaultValue = "0")
+                    Integer num2){
+        int first = Integer.parseInt(String.valueOf(num1));
+        int second = Integer.parseInt(String.valueOf(num2));
+        return first - second;
     }
 }
