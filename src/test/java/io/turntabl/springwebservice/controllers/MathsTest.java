@@ -1,17 +1,14 @@
 package io.turntabl.springwebservice.controllers;
 
-import org.junit.Before;
-import org.junit.Test;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+@SpringBootTest
 public class MathsTest {
-    private Maths maths;
-
-    @Before
-    public void setup(){
-        maths = new Maths();
-    }
+    private Maths maths  = new Maths();
 
     @Test
     public void add_Zero() {
@@ -39,7 +36,7 @@ public class MathsTest {
     @Test
     public void subtract_zero() {
         int result = maths.subtract(0, 0);
-        assertEquals(1, result);
+        assertEquals(0, result);
     }
 
     @Test
@@ -51,7 +48,7 @@ public class MathsTest {
     @Test
     public void subtract_negatives() {
         int result = maths.subtract(-2, -1);
-        assertEquals(1, result);
+        assertEquals(-1, result);
     }
 
     @Test

@@ -1,13 +1,14 @@
-package io.turntabl.springwebservice;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+ package io.turntabl.springwebservice;
 
-@SpringBootTest
-class SpringWebServiceApplicationTests {
+ import org.junit.jupiter.api.Test;
+ import org.springframework.boot.test.context.SpringBootTest;
 
-	@Test
-	void contextLoads() {
-	}
+ @SpringBootTest
+ class SpringWebServiceApplicationTests {
 
-}
+ @Test
+ void contextLoads() {
+ }
+
+ }
